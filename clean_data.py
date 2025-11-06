@@ -2,13 +2,19 @@
 import pandas as pd
 pd.__version__
 
-def clean_data():
+def clean():
 
     #Read and Display CSV data
     df = pd.read_csv('Marco-Ferreira-DataSet.csv', sep= ";")
+    
+    #Shape
+    print(df.shape)
+
+    #Variables names
+
     print(df.head())
 
-    print(df.shape)
+    
     print(df.dtypes)
     print(df.isna().sum())
 
@@ -70,5 +76,5 @@ def clean_data():
     return df
 
 if __name__ == "__main__":
-    df = clean_data()
+    df = clean()
     print(df.head())
